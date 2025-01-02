@@ -35,33 +35,33 @@
             this.maas_button4 = new System.Windows.Forms.Button();
             this.maas_button5 = new System.Windows.Forms.Button();
             this.maas_button6 = new System.Windows.Forms.Button();
-            this.ucak_bakiye_text = new System.Windows.Forms.Label();
-            this.hamburger_bakiye_text = new System.Windows.Forms.Label();
-            this.kaykay_bakiye_text = new System.Windows.Forms.Label();
-            this.formula_bakiye_text = new System.Windows.Forms.Label();
-            this.paten_bakiye_text = new System.Windows.Forms.Label();
-            this.telefon_bakiye_text = new System.Windows.Forms.Label();
+            this.airplane_balance_text = new System.Windows.Forms.Label();
+            this.hamburger_balance_text = new System.Windows.Forms.Label();
+            this.skateboard_balance_text = new System.Windows.Forms.Label();
+            this.formula_balance_text = new System.Windows.Forms.Label();
+            this.skate_balance_text = new System.Windows.Forms.Label();
+            this.telephone_balance_text = new System.Windows.Forms.Label();
             this.reset = new System.Windows.Forms.Button();
             this.bakiye_title = new System.Windows.Forms.Label();
             this.takas = new System.Windows.Forms.Button();
-            this.gonderen_cb = new System.Windows.Forms.ComboBox();
-            this.alan_cb = new System.Windows.Forms.ComboBox();
+            this.remitter_cb = new System.Windows.Forms.ComboBox();
+            this.beneficiary_cb = new System.Windows.Forms.ComboBox();
             this.gonderen_title = new System.Windows.Forms.Label();
             this.alan_title = new System.Windows.Forms.Label();
             this.ucret_title = new System.Windows.Forms.Label();
-            this.dusulecek_miktar = new System.Windows.Forms.TextBox();
-            this.ucak_oyuncusu = new System.Windows.Forms.TextBox();
+            this.deduction = new System.Windows.Forms.TextBox();
+            this.airplane_player = new System.Windows.Forms.TextBox();
             this.ucak_oyuncusu_title = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.hamburger_oyuncusu = new System.Windows.Forms.TextBox();
+            this.hamburger_player = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.kaykay_oyuncusu = new System.Windows.Forms.TextBox();
+            this.skateboard_player = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.formula_oyuncusu = new System.Windows.Forms.TextBox();
+            this.formula_player = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.paten_oyuncusu = new System.Windows.Forms.TextBox();
+            this.skate_player = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.telefon_oyuncusu = new System.Windows.Forms.TextBox();
+            this.telephone_player = new System.Windows.Forms.TextBox();
             this.oyuncu_kaydet = new System.Windows.Forms.Button();
             this.oyunculari_sifirla = new System.Windows.Forms.Button();
             this.telefon_simge = new System.Windows.Forms.PictureBox();
@@ -86,7 +86,7 @@
             this.maas_button1.TabIndex = 1;
             this.maas_button1.Text = "Maaş Ver";
             this.maas_button1.UseVisualStyleBackColor = true;
-            this.maas_button1.Click += new System.EventHandler(this.maas_button1_Click);
+            this.maas_button1.Click += new System.EventHandler(this.airplane_pay);
             // 
             // maas_button2
             // 
@@ -96,7 +96,7 @@
             this.maas_button2.TabIndex = 2;
             this.maas_button2.Text = "Maaş Ver";
             this.maas_button2.UseVisualStyleBackColor = true;
-            this.maas_button2.Click += new System.EventHandler(this.maas_button2_Click);
+            this.maas_button2.Click += new System.EventHandler(this.hamburger_pay);
             // 
             // maas_button3
             // 
@@ -106,7 +106,7 @@
             this.maas_button3.TabIndex = 3;
             this.maas_button3.Text = "Maaş Ver";
             this.maas_button3.UseVisualStyleBackColor = true;
-            this.maas_button3.Click += new System.EventHandler(this.maas_button3_Click);
+            this.maas_button3.Click += new System.EventHandler(this.skateboard_pay);
             // 
             // maas_button4
             // 
@@ -116,7 +116,7 @@
             this.maas_button4.TabIndex = 4;
             this.maas_button4.Text = "Maaş Ver";
             this.maas_button4.UseVisualStyleBackColor = true;
-            this.maas_button4.Click += new System.EventHandler(this.maas_button4_Click);
+            this.maas_button4.Click += new System.EventHandler(this.formula_pay);
             // 
             // maas_button5
             // 
@@ -126,7 +126,7 @@
             this.maas_button5.TabIndex = 5;
             this.maas_button5.Text = "Maaş Ver";
             this.maas_button5.UseVisualStyleBackColor = true;
-            this.maas_button5.Click += new System.EventHandler(this.maas_button5_Click);
+            this.maas_button5.Click += new System.EventHandler(this.skate_pay);
             // 
             // maas_button6
             // 
@@ -136,67 +136,67 @@
             this.maas_button6.TabIndex = 6;
             this.maas_button6.Text = "Maaş Ver";
             this.maas_button6.UseVisualStyleBackColor = true;
-            this.maas_button6.Click += new System.EventHandler(this.maas_button6_Click);
+            this.maas_button6.Click += new System.EventHandler(this.telephone_pay);
             // 
             // ucak_bakiye_text
             // 
-            this.ucak_bakiye_text.AutoSize = true;
-            this.ucak_bakiye_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.ucak_bakiye_text.Location = new System.Drawing.Point(123, 72);
-            this.ucak_bakiye_text.Name = "ucak_bakiye_text";
-            this.ucak_bakiye_text.Size = new System.Drawing.Size(63, 16);
-            this.ucak_bakiye_text.TabIndex = 0;
-            this.ucak_bakiye_text.Text = "15000000";
+            this.airplane_balance_text.AutoSize = true;
+            this.airplane_balance_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.airplane_balance_text.Location = new System.Drawing.Point(123, 72);
+            this.airplane_balance_text.Name = "ucak_bakiye_text";
+            this.airplane_balance_text.Size = new System.Drawing.Size(63, 16);
+            this.airplane_balance_text.TabIndex = 0;
+            this.airplane_balance_text.Text = "15000000";
             // 
             // hamburger_bakiye_text
             // 
-            this.hamburger_bakiye_text.AutoSize = true;
-            this.hamburger_bakiye_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.hamburger_bakiye_text.Location = new System.Drawing.Point(123, 147);
-            this.hamburger_bakiye_text.Name = "hamburger_bakiye_text";
-            this.hamburger_bakiye_text.Size = new System.Drawing.Size(63, 16);
-            this.hamburger_bakiye_text.TabIndex = 0;
-            this.hamburger_bakiye_text.Text = "15000000";
+            this.hamburger_balance_text.AutoSize = true;
+            this.hamburger_balance_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.hamburger_balance_text.Location = new System.Drawing.Point(123, 147);
+            this.hamburger_balance_text.Name = "hamburger_bakiye_text";
+            this.hamburger_balance_text.Size = new System.Drawing.Size(63, 16);
+            this.hamburger_balance_text.TabIndex = 0;
+            this.hamburger_balance_text.Text = "15000000";
             // 
             // kaykay_bakiye_text
             // 
-            this.kaykay_bakiye_text.AutoSize = true;
-            this.kaykay_bakiye_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kaykay_bakiye_text.Location = new System.Drawing.Point(123, 222);
-            this.kaykay_bakiye_text.Name = "kaykay_bakiye_text";
-            this.kaykay_bakiye_text.Size = new System.Drawing.Size(63, 16);
-            this.kaykay_bakiye_text.TabIndex = 0;
-            this.kaykay_bakiye_text.Text = "15000000";
+            this.skateboard_balance_text.AutoSize = true;
+            this.skateboard_balance_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.skateboard_balance_text.Location = new System.Drawing.Point(123, 222);
+            this.skateboard_balance_text.Name = "kaykay_bakiye_text";
+            this.skateboard_balance_text.Size = new System.Drawing.Size(63, 16);
+            this.skateboard_balance_text.TabIndex = 0;
+            this.skateboard_balance_text.Text = "15000000";
             // 
             // formula_bakiye_text
             // 
-            this.formula_bakiye_text.AutoSize = true;
-            this.formula_bakiye_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.formula_bakiye_text.Location = new System.Drawing.Point(123, 297);
-            this.formula_bakiye_text.Name = "formula_bakiye_text";
-            this.formula_bakiye_text.Size = new System.Drawing.Size(63, 16);
-            this.formula_bakiye_text.TabIndex = 0;
-            this.formula_bakiye_text.Text = "15000000";
+            this.formula_balance_text.AutoSize = true;
+            this.formula_balance_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.formula_balance_text.Location = new System.Drawing.Point(123, 297);
+            this.formula_balance_text.Name = "formula_bakiye_text";
+            this.formula_balance_text.Size = new System.Drawing.Size(63, 16);
+            this.formula_balance_text.TabIndex = 0;
+            this.formula_balance_text.Text = "15000000";
             // 
             // paten_bakiye_text
             // 
-            this.paten_bakiye_text.AutoSize = true;
-            this.paten_bakiye_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.paten_bakiye_text.Location = new System.Drawing.Point(123, 372);
-            this.paten_bakiye_text.Name = "paten_bakiye_text";
-            this.paten_bakiye_text.Size = new System.Drawing.Size(63, 16);
-            this.paten_bakiye_text.TabIndex = 0;
-            this.paten_bakiye_text.Text = "15000000";
+            this.skate_balance_text.AutoSize = true;
+            this.skate_balance_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.skate_balance_text.Location = new System.Drawing.Point(123, 372);
+            this.skate_balance_text.Name = "paten_bakiye_text";
+            this.skate_balance_text.Size = new System.Drawing.Size(63, 16);
+            this.skate_balance_text.TabIndex = 0;
+            this.skate_balance_text.Text = "15000000";
             // 
             // telefon_bakiye_text
             // 
-            this.telefon_bakiye_text.AutoSize = true;
-            this.telefon_bakiye_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.telefon_bakiye_text.Location = new System.Drawing.Point(123, 447);
-            this.telefon_bakiye_text.Name = "telefon_bakiye_text";
-            this.telefon_bakiye_text.Size = new System.Drawing.Size(63, 16);
-            this.telefon_bakiye_text.TabIndex = 0;
-            this.telefon_bakiye_text.Text = "15000000";
+            this.telephone_balance_text.AutoSize = true;
+            this.telephone_balance_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.telephone_balance_text.Location = new System.Drawing.Point(123, 447);
+            this.telephone_balance_text.Name = "telefon_bakiye_text";
+            this.telephone_balance_text.Size = new System.Drawing.Size(63, 16);
+            this.telephone_balance_text.TabIndex = 0;
+            this.telephone_balance_text.Text = "15000000";
             // 
             // reset
             // 
@@ -207,7 +207,7 @@
             this.reset.TabIndex = 18;
             this.reset.Text = "Bakiye Sıfırla";
             this.reset.UseVisualStyleBackColor = true;
-            this.reset.Click += new System.EventHandler(this.bakiye_sifirla);
+            this.reset.Click += new System.EventHandler(this.reset_balance);
             // 
             // bakiye_title
             // 
@@ -221,37 +221,41 @@
             // 
             // takas
             // 
+            this.takas.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.takas.Location = new System.Drawing.Point(974, 72);
             this.takas.Name = "takas";
             this.takas.Size = new System.Drawing.Size(75, 23);
             this.takas.TabIndex = 10;
             this.takas.Text = "Takas";
             this.takas.UseVisualStyleBackColor = true;
-            this.takas.Click += new System.EventHandler(this.kira_ver);
+            this.takas.Click += new System.EventHandler(this.rent_payment);
             // 
             // gonderen_cb
             // 
-            this.gonderen_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gonderen_cb.FormattingEnabled = true;
-            this.gonderen_cb.Location = new System.Drawing.Point(559, 74);
-            this.gonderen_cb.Name = "gonderen_cb";
-            this.gonderen_cb.Size = new System.Drawing.Size(121, 21);
-            this.gonderen_cb.TabIndex = 7;
-            this.gonderen_cb.SelectedIndexChanged += new System.EventHandler(this.gonderen_cb_SelectedIndexChanged);
+            this.remitter_cb.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.remitter_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.remitter_cb.FormattingEnabled = true;
+            this.remitter_cb.Location = new System.Drawing.Point(559, 74);
+            this.remitter_cb.Name = "gonderen_cb";
+            this.remitter_cb.Size = new System.Drawing.Size(121, 21);
+            this.remitter_cb.TabIndex = 7;
+            this.remitter_cb.SelectedIndexChanged += new System.EventHandler(this.gonderen_cb_SelectedIndexChanged);
             // 
             // alan_cb
             // 
-            this.alan_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.alan_cb.FormattingEnabled = true;
-            this.alan_cb.Location = new System.Drawing.Point(710, 74);
-            this.alan_cb.Name = "alan_cb";
-            this.alan_cb.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.alan_cb.Size = new System.Drawing.Size(121, 21);
-            this.alan_cb.TabIndex = 8;
-            this.alan_cb.SelectedIndexChanged += new System.EventHandler(this.alan_cb_SelectedIndexChanged);
+            this.beneficiary_cb.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.beneficiary_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.beneficiary_cb.FormattingEnabled = true;
+            this.beneficiary_cb.Location = new System.Drawing.Point(710, 74);
+            this.beneficiary_cb.Name = "alan_cb";
+            this.beneficiary_cb.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.beneficiary_cb.Size = new System.Drawing.Size(121, 21);
+            this.beneficiary_cb.TabIndex = 8;
+            this.beneficiary_cb.SelectedIndexChanged += new System.EventHandler(this.alan_cb_SelectedIndexChanged);
             // 
             // gonderen_title
             // 
+            this.gonderen_title.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gonderen_title.AutoSize = true;
             this.gonderen_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gonderen_title.Location = new System.Drawing.Point(567, 24);
@@ -262,6 +266,7 @@
             // 
             // alan_title
             // 
+            this.alan_title.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.alan_title.AutoSize = true;
             this.alan_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.alan_title.Location = new System.Drawing.Point(744, 24);
@@ -272,6 +277,7 @@
             // 
             // ucret_title
             // 
+            this.ucret_title.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ucret_title.AutoSize = true;
             this.ucret_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ucret_title.Location = new System.Drawing.Point(872, 24);
@@ -282,20 +288,21 @@
             // 
             // dusulecek_miktar
             // 
-            this.dusulecek_miktar.Location = new System.Drawing.Point(853, 74);
-            this.dusulecek_miktar.MaxLength = 8;
-            this.dusulecek_miktar.Name = "dusulecek_miktar";
-            this.dusulecek_miktar.Size = new System.Drawing.Size(100, 20);
-            this.dusulecek_miktar.TabIndex = 9;
-            this.dusulecek_miktar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dusulecek_miktar_KeyPress);
+            this.deduction.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.deduction.Location = new System.Drawing.Point(853, 74);
+            this.deduction.MaxLength = 8;
+            this.deduction.Name = "dusulecek_miktar";
+            this.deduction.Size = new System.Drawing.Size(100, 20);
+            this.deduction.TabIndex = 9;
+            this.deduction.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Deduction_KeyPress);
             // 
             // ucak_oyuncusu
             // 
-            this.ucak_oyuncusu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ucak_oyuncusu.Location = new System.Drawing.Point(237, 668);
-            this.ucak_oyuncusu.Name = "ucak_oyuncusu";
-            this.ucak_oyuncusu.Size = new System.Drawing.Size(100, 20);
-            this.ucak_oyuncusu.TabIndex = 11;
+            this.airplane_player.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.airplane_player.Location = new System.Drawing.Point(237, 668);
+            this.airplane_player.Name = "ucak_oyuncusu";
+            this.airplane_player.Size = new System.Drawing.Size(100, 20);
+            this.airplane_player.TabIndex = 11;
             // 
             // ucak_oyuncusu_title
             // 
@@ -321,11 +328,11 @@
             // 
             // hamburger_oyuncusu
             // 
-            this.hamburger_oyuncusu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.hamburger_oyuncusu.Location = new System.Drawing.Point(237, 701);
-            this.hamburger_oyuncusu.Name = "hamburger_oyuncusu";
-            this.hamburger_oyuncusu.Size = new System.Drawing.Size(100, 20);
-            this.hamburger_oyuncusu.TabIndex = 12;
+            this.hamburger_player.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.hamburger_player.Location = new System.Drawing.Point(237, 701);
+            this.hamburger_player.Name = "hamburger_oyuncusu";
+            this.hamburger_player.Size = new System.Drawing.Size(100, 20);
+            this.hamburger_player.TabIndex = 12;
             // 
             // label2
             // 
@@ -340,11 +347,11 @@
             // 
             // kaykay_oyuncusu
             // 
-            this.kaykay_oyuncusu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.kaykay_oyuncusu.Location = new System.Drawing.Point(237, 734);
-            this.kaykay_oyuncusu.Name = "kaykay_oyuncusu";
-            this.kaykay_oyuncusu.Size = new System.Drawing.Size(100, 20);
-            this.kaykay_oyuncusu.TabIndex = 13;
+            this.skateboard_player.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.skateboard_player.Location = new System.Drawing.Point(237, 734);
+            this.skateboard_player.Name = "kaykay_oyuncusu";
+            this.skateboard_player.Size = new System.Drawing.Size(100, 20);
+            this.skateboard_player.TabIndex = 13;
             // 
             // label3
             // 
@@ -359,11 +366,11 @@
             // 
             // formula_oyuncusu
             // 
-            this.formula_oyuncusu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.formula_oyuncusu.Location = new System.Drawing.Point(237, 767);
-            this.formula_oyuncusu.Name = "formula_oyuncusu";
-            this.formula_oyuncusu.Size = new System.Drawing.Size(100, 20);
-            this.formula_oyuncusu.TabIndex = 14;
+            this.formula_player.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.formula_player.Location = new System.Drawing.Point(237, 767);
+            this.formula_player.Name = "formula_oyuncusu";
+            this.formula_player.Size = new System.Drawing.Size(100, 20);
+            this.formula_player.TabIndex = 14;
             // 
             // label4
             // 
@@ -378,11 +385,11 @@
             // 
             // paten_oyuncusu
             // 
-            this.paten_oyuncusu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.paten_oyuncusu.Location = new System.Drawing.Point(237, 800);
-            this.paten_oyuncusu.Name = "paten_oyuncusu";
-            this.paten_oyuncusu.Size = new System.Drawing.Size(100, 20);
-            this.paten_oyuncusu.TabIndex = 15;
+            this.skate_player.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.skate_player.Location = new System.Drawing.Point(237, 800);
+            this.skate_player.Name = "paten_oyuncusu";
+            this.skate_player.Size = new System.Drawing.Size(100, 20);
+            this.skate_player.TabIndex = 15;
             // 
             // label5
             // 
@@ -397,11 +404,11 @@
             // 
             // telefon_oyuncusu
             // 
-            this.telefon_oyuncusu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.telefon_oyuncusu.Location = new System.Drawing.Point(237, 833);
-            this.telefon_oyuncusu.Name = "telefon_oyuncusu";
-            this.telefon_oyuncusu.Size = new System.Drawing.Size(100, 20);
-            this.telefon_oyuncusu.TabIndex = 16;
+            this.telephone_player.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.telephone_player.Location = new System.Drawing.Point(237, 833);
+            this.telephone_player.Name = "telefon_oyuncusu";
+            this.telephone_player.Size = new System.Drawing.Size(100, 20);
+            this.telephone_player.TabIndex = 16;
             // 
             // oyuncu_kaydet
             // 
@@ -412,7 +419,7 @@
             this.oyuncu_kaydet.TabIndex = 17;
             this.oyuncu_kaydet.Text = "Oyuncuları Kaydet";
             this.oyuncu_kaydet.UseVisualStyleBackColor = true;
-            this.oyuncu_kaydet.Click += new System.EventHandler(this.oyuncu_kaydet_Click);
+            this.oyuncu_kaydet.Click += new System.EventHandler(this.save_players);
             // 
             // oyunculari_sifirla
             // 
@@ -423,7 +430,7 @@
             this.oyunculari_sifirla.TabIndex = 18;
             this.oyunculari_sifirla.Text = "Oyuncu Sıfırla";
             this.oyunculari_sifirla.UseVisualStyleBackColor = true;
-            this.oyunculari_sifirla.Click += new System.EventHandler(this.oyuncu_sifirla);
+            this.oyunculari_sifirla.Click += new System.EventHandler(this.reset_players);
             // 
             // telefon_simge
             // 
@@ -485,19 +492,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1424, 861);
             this.Controls.Add(this.oyuncu_kaydet);
-            this.Controls.Add(this.telefon_oyuncusu);
-            this.Controls.Add(this.paten_oyuncusu);
-            this.Controls.Add(this.formula_oyuncusu);
-            this.Controls.Add(this.kaykay_oyuncusu);
-            this.Controls.Add(this.hamburger_oyuncusu);
-            this.Controls.Add(this.ucak_oyuncusu);
-            this.Controls.Add(this.alan_cb);
+            this.Controls.Add(this.telephone_player);
+            this.Controls.Add(this.skate_player);
+            this.Controls.Add(this.formula_player);
+            this.Controls.Add(this.skateboard_player);
+            this.Controls.Add(this.hamburger_player);
+            this.Controls.Add(this.airplane_player);
+            this.Controls.Add(this.beneficiary_cb);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.gonderen_cb);
+            this.Controls.Add(this.remitter_cb);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.takas);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dusulecek_miktar);
+            this.Controls.Add(this.deduction);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ucret_title);
             this.Controls.Add(this.label1);
@@ -507,12 +514,12 @@
             this.Controls.Add(this.bakiye_title);
             this.Controls.Add(this.oyunculari_sifirla);
             this.Controls.Add(this.reset);
-            this.Controls.Add(this.telefon_bakiye_text);
-            this.Controls.Add(this.kaykay_bakiye_text);
-            this.Controls.Add(this.paten_bakiye_text);
-            this.Controls.Add(this.hamburger_bakiye_text);
-            this.Controls.Add(this.formula_bakiye_text);
-            this.Controls.Add(this.ucak_bakiye_text);
+            this.Controls.Add(this.telephone_balance_text);
+            this.Controls.Add(this.skateboard_balance_text);
+            this.Controls.Add(this.skate_balance_text);
+            this.Controls.Add(this.hamburger_balance_text);
+            this.Controls.Add(this.formula_balance_text);
+            this.Controls.Add(this.airplane_balance_text);
             this.Controls.Add(this.telefon_simge);
             this.Controls.Add(this.paten_simge);
             this.Controls.Add(this.formula_simge);
@@ -528,7 +535,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "main_page";
             this.Text = "Monopoly";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.main_page_Load);
             ((System.ComponentModel.ISupportInitialize)(this.telefon_simge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paten_simge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.formula_simge)).EndInit();
@@ -554,33 +561,33 @@
         private System.Windows.Forms.PictureBox formula_simge;
         private System.Windows.Forms.PictureBox paten_simge;
         private System.Windows.Forms.PictureBox telefon_simge;
-        private System.Windows.Forms.Label ucak_bakiye_text;
-        private System.Windows.Forms.Label hamburger_bakiye_text;
-        private System.Windows.Forms.Label kaykay_bakiye_text;
-        private System.Windows.Forms.Label formula_bakiye_text;
-        private System.Windows.Forms.Label paten_bakiye_text;
-        private System.Windows.Forms.Label telefon_bakiye_text;
+        private System.Windows.Forms.Label airplane_balance_text;
+        private System.Windows.Forms.Label hamburger_balance_text;
+        private System.Windows.Forms.Label skateboard_balance_text;
+        private System.Windows.Forms.Label formula_balance_text;
+        private System.Windows.Forms.Label skate_balance_text;
+        private System.Windows.Forms.Label telephone_balance_text;
         private System.Windows.Forms.Button reset;
         private System.Windows.Forms.Label bakiye_title;
         private System.Windows.Forms.Button takas;
-        private System.Windows.Forms.ComboBox gonderen_cb;
-        private System.Windows.Forms.ComboBox alan_cb;
+        private System.Windows.Forms.ComboBox remitter_cb;
+        private System.Windows.Forms.ComboBox beneficiary_cb;
         private System.Windows.Forms.Label gonderen_title;
         private System.Windows.Forms.Label alan_title;
         private System.Windows.Forms.Label ucret_title;
-        private System.Windows.Forms.TextBox dusulecek_miktar;
-        private System.Windows.Forms.TextBox ucak_oyuncusu;
+        private System.Windows.Forms.TextBox deduction;
+        private System.Windows.Forms.TextBox airplane_player;
         private System.Windows.Forms.Label ucak_oyuncusu_title;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox hamburger_oyuncusu;
+        private System.Windows.Forms.TextBox hamburger_player;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox kaykay_oyuncusu;
+        private System.Windows.Forms.TextBox skateboard_player;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox formula_oyuncusu;
+        private System.Windows.Forms.TextBox formula_player;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox paten_oyuncusu;
+        private System.Windows.Forms.TextBox skate_player;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox telefon_oyuncusu;
+        private System.Windows.Forms.TextBox telephone_player;
         private System.Windows.Forms.Button oyuncu_kaydet;
         private System.Windows.Forms.Button oyunculari_sifirla;
     }

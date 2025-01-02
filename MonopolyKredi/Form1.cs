@@ -12,64 +12,64 @@ namespace MonopolyKredi
 {
     public partial class main_page : Form
     {
-        int[] bakiye = new int[6];
-        string gonderen,alan;
-        int kira;
+        int[] balance = new int[6];
+        string remitter,beneficiary;
+        int rent;
         public main_page()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void main_page_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < bakiye.Length; i++)
+            for (int i = 0; i < balance.Length; i++)
             {
-                bakiye[i] = 15000000;
+                balance[i] = 15000000;
             }
-            tum_bakiye_guncelle();
+            update_all_balance();
         }
 
-        private void maas_button1_Click(object sender, EventArgs e)
+        private void airplane_pay(object sender, EventArgs e)
         {
-            maas_ver(ref bakiye[0]);
-            bakiye_guncelle(bakiye[0], ucak_bakiye_text);
+            give_salary(ref balance[0]);
+            update_balance(balance[0], airplane_balance_text);
         }
 
-        private void maas_button2_Click(object sender, EventArgs e)
+        private void hamburger_pay(object sender, EventArgs e)
         {
-            maas_ver(ref bakiye[1]);
-            bakiye_guncelle(bakiye[1], hamburger_bakiye_text);
+            give_salary(ref balance[1]);
+            update_balance(balance[1], hamburger_balance_text);
         }
 
-        private void maas_button3_Click(object sender, EventArgs e)
+        private void skateboard_pay(object sender, EventArgs e)
         {
-            maas_ver(ref bakiye[2]);
-            bakiye_guncelle(bakiye[2], kaykay_bakiye_text);
+            give_salary(ref balance[2]);
+            update_balance(balance[2], skateboard_balance_text);
         }
 
-        private void maas_button4_Click(object sender, EventArgs e)
+        private void formula_pay(object sender, EventArgs e)
         {
-            maas_ver(ref bakiye[3]);
-            bakiye_guncelle(bakiye[3], formula_bakiye_text);
+            give_salary(ref balance[3]);
+            update_balance(balance[3], formula_balance_text);
         }
 
-        private void maas_button5_Click(object sender, EventArgs e)
+        private void skate_pay(object sender, EventArgs e)
         {
-            maas_ver(ref bakiye[4]);
-            bakiye_guncelle(bakiye[4], paten_bakiye_text);
+            give_salary(ref balance[4]);
+            update_balance(balance[4], skate_balance_text);
         }
 
-        private void maas_button6_Click(object sender, EventArgs e)
+        private void telephone_pay(object sender, EventArgs e)
         {
-            maas_ver(ref bakiye[5]);
-            bakiye_guncelle(bakiye[5], telefon_bakiye_text);
+            give_salary(ref balance[5]);
+            update_balance(balance[5], telephone_balance_text);
         }
-        private void maas_ver(ref int maas)
+        private void give_salary(ref int maas)
         {
             maas += 2000000;
         }
-        private void bakiye_guncelle(int bakiye, Label bakiye_text)
+        private void update_balance(int bakiye, Label bakiye_text)
         {
             if (bakiye < 0) {
                 bakiye_text.Text = "***İFLAS***";
@@ -79,60 +79,60 @@ namespace MonopolyKredi
                 bakiye_text.Text = bakiye.ToString("$###,###,###");
             }
         }
-        private void tum_bakiye_guncelle()
+        private void update_all_balance()
         {
-            if (bakiye[0] < 0) {
-                ucak_bakiye_text.Text = "***İFLAS***";
+            if (balance[0] < 0) {
+                airplane_balance_text.Text = "***İFLAS***";
             }
             else
             {
-                ucak_bakiye_text.Text = bakiye[0].ToString("$###,###,###");
+                airplane_balance_text.Text = balance[0].ToString("$###,###,###");
             }
-            hamburger_bakiye_text.Text = bakiye[1].ToString("$###,###,###");
-            kaykay_bakiye_text.Text = bakiye[2].ToString("$###,###,###");
-            formula_bakiye_text.Text = bakiye[3].ToString("$###,###,###");
-            paten_bakiye_text.Text = bakiye[4].ToString("$###,###,###");
-            telefon_bakiye_text.Text = bakiye[5].ToString("$###,###,###");
+            hamburger_balance_text.Text = balance[1].ToString("$###,###,###");
+            skateboard_balance_text.Text = balance[2].ToString("$###,###,###");
+            formula_balance_text.Text = balance[3].ToString("$###,###,###");
+            skate_balance_text.Text = balance[4].ToString("$###,###,###");
+            telephone_balance_text.Text = balance[5].ToString("$###,###,###");
         }
-        private void bakiye_sifirla(object sender, EventArgs e)
+        private void reset_balance(object sender, EventArgs e)
         {
-            for (int i = 0; i < bakiye.Length; i++)
+            for (int i = 0; i < balance.Length; i++)
             {
-                bakiye[i] = 15000000;
+                balance[i] = 15000000;
             }
-            tum_bakiye_guncelle();
+            update_all_balance();
         }
-        private void oyuncu_sifirla(object sender, EventArgs e)
+        private void reset_players(object sender, EventArgs e)
         {
-            gonderen_cb.Items.Clear();
-            alan_cb.Items.Clear();
+            remitter_cb.Items.Clear();
+            beneficiary_cb.Items.Clear();
         }
 
         private void gonderen_cb_SelectedIndexChanged(object sender, EventArgs e)
         {
-            gonderen = gonderen_cb.Text;
+            this.remitter = remitter_cb.Text;
         }
 
         private void alan_cb_SelectedIndexChanged(object sender, EventArgs e)
         {
-            alan = alan_cb.Text;
+            beneficiary = beneficiary_cb.Text;
         }
 
-        private void kira_ver(object sender, EventArgs e)
+        private void rent_payment(object sender, EventArgs e)
         {
             try
             {
-                kira = int.Parse(dusulecek_miktar.Text);
+                rent = int.Parse(deduction.Text);
             }
             catch 
             {
                 MessageBox.Show("Takas edilecek miktar gir");
             }
-            kira_gonderim_kontrol();
-            tum_bakiye_guncelle();
+            rent_payment_control();
+            update_all_balance();
         }
 
-        private void dusulecek_miktar_KeyPress(object sender, KeyPressEventArgs e)
+        private void Deduction_KeyPress(object sender, KeyPressEventArgs e)
         {
             if(!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
@@ -140,195 +140,195 @@ namespace MonopolyKredi
             }
         }
 
-        private void oyuncu_kaydet_Click(object sender, EventArgs e)
+        private void save_players(object sender, EventArgs e)
         {
-            if (ucak_oyuncusu.Text != "" && !gonderen_cb.Items.Contains(ucak_oyuncusu.Text) && !alan_cb.Items.Contains(ucak_oyuncusu.Text))
+            if (airplane_player.Text != "" && !remitter_cb.Items.Contains(airplane_player.Text) && !beneficiary_cb.Items.Contains(airplane_player.Text))
             {
-                gonderen_cb.Items.Add(ucak_oyuncusu.Text);
-                alan_cb.Items.Add(ucak_oyuncusu.Text);
+                remitter_cb.Items.Add(airplane_player.Text);
+                beneficiary_cb.Items.Add(airplane_player.Text);
             }
-            if (hamburger_oyuncusu.Text != "" && !gonderen_cb.Items.Contains(hamburger_oyuncusu.Text) && !alan_cb.Items.Contains(hamburger_oyuncusu.Text))
+            if (hamburger_player.Text != "" && !remitter_cb.Items.Contains(hamburger_player.Text) && !beneficiary_cb.Items.Contains(hamburger_player.Text))
             {
-                gonderen_cb.Items.Add(hamburger_oyuncusu.Text);
-                alan_cb.Items.Add(hamburger_oyuncusu.Text);
+                remitter_cb.Items.Add(hamburger_player.Text);
+                beneficiary_cb.Items.Add(hamburger_player.Text);
             }
-            if (kaykay_oyuncusu.Text != "" && !gonderen_cb.Items.Contains(kaykay_oyuncusu.Text) && !alan_cb.Items.Contains(kaykay_oyuncusu.Text))
+            if (skateboard_player.Text != "" && !remitter_cb.Items.Contains(skateboard_player.Text) && !beneficiary_cb.Items.Contains(skateboard_player.Text))
             {
-                gonderen_cb.Items.Add(kaykay_oyuncusu.Text);
-                alan_cb.Items.Add(kaykay_oyuncusu.Text);
+                remitter_cb.Items.Add(skateboard_player.Text);
+                beneficiary_cb.Items.Add(skateboard_player.Text);
             }
-            if (formula_oyuncusu.Text != "" && !gonderen_cb.Items.Contains(formula_oyuncusu.Text) && !alan_cb.Items.Contains(formula_oyuncusu.Text))
+            if (formula_player.Text != "" && !remitter_cb.Items.Contains(formula_player.Text) && !beneficiary_cb.Items.Contains(formula_player.Text))
             {
-                gonderen_cb.Items.Add(formula_oyuncusu.Text);
-                alan_cb.Items.Add(formula_oyuncusu.Text);
+                remitter_cb.Items.Add(formula_player.Text);
+                beneficiary_cb.Items.Add(formula_player.Text);
             }
-            if (paten_oyuncusu.Text != "" && !gonderen_cb.Items.Contains(paten_oyuncusu.Text) && !alan_cb.Items.Contains(paten_oyuncusu.Text))
+            if (skate_player.Text != "" && !remitter_cb.Items.Contains(skate_player.Text) && !beneficiary_cb.Items.Contains(skate_player.Text))
             {
-                gonderen_cb.Items.Add(paten_oyuncusu.Text);
-                alan_cb.Items.Add(paten_oyuncusu.Text);
+                remitter_cb.Items.Add(skate_player.Text);
+                beneficiary_cb.Items.Add(skate_player.Text);
             }
-            if (telefon_oyuncusu.Text != "" && !gonderen_cb.Items.Contains(telefon_oyuncusu.Text) && !alan_cb.Items.Contains(telefon_oyuncusu.Text))
+            if (telephone_player.Text != "" && !remitter_cb.Items.Contains(telephone_player.Text) && !beneficiary_cb.Items.Contains(telephone_player.Text))
             {
-                gonderen_cb.Items.Add(telefon_oyuncusu.Text);
-                alan_cb.Items.Add(telefon_oyuncusu.Text);
+                remitter_cb.Items.Add(telephone_player.Text);
+                beneficiary_cb.Items.Add(telephone_player.Text);
             }
         }
 
-        private void kira_gonderim_kontrol()
+        private void rent_payment_control()
         {
-            if (gonderen == ucak_oyuncusu.Text)
+            if (remitter == airplane_player.Text)
             {
-                switch (alan)
+                switch (beneficiary)
                 {
-                    case string alanadi when alanadi == hamburger_oyuncusu.Text:
-                        bakiye[0] -= kira;
-                        bakiye[1] += kira;
+                    case string beneficiaryName when beneficiaryName == hamburger_player.Text:
+                        balance[0] -= rent;
+                        balance[1] += rent;
                         break;
-                    case string alanadi when alanadi == kaykay_oyuncusu.Text:
-                        bakiye[0] -= kira;
-                        bakiye[2] += kira;
+                    case string beneficiaryName when beneficiaryName == skateboard_player.Text:
+                        balance[0] -= rent;
+                        balance[2] += rent;
                         break;
-                    case string alanadi when alanadi == formula_oyuncusu.Text:
-                        bakiye[0] -= kira;
-                        bakiye[3] += kira;
+                    case string beneficiaryName when beneficiaryName == formula_player.Text:
+                        balance[0] -= rent;
+                        balance[3] += rent;
                         break;
-                    case string alanadi when alanadi == paten_oyuncusu.Text:
-                        bakiye[0] -= kira;
-                        bakiye[4] += kira;
+                    case string beneficiaryName when beneficiaryName == skate_player.Text:
+                        balance[0] -= rent;
+                        balance[4] += rent;
                         break;
-                    case string alanadi when alanadi == telefon_oyuncusu.Text:
-                        bakiye[0] -= kira;
-                        bakiye[5] += kira;
+                    case string beneficiaryName when beneficiaryName == telephone_player.Text:
+                        balance[0] -= rent;
+                        balance[5] += rent;
                         break;
                 }
             }
-            else if (gonderen == hamburger_oyuncusu.Text)
+            else if (remitter == hamburger_player.Text)
             {
-                switch (alan)
+                switch (beneficiary)
                 {
-                    case string alanadi when alanadi == ucak_oyuncusu.Text:
-                        bakiye[1] -= kira;
-                        bakiye[0] += kira;
+                    case string beneficiaryName when beneficiaryName == airplane_player.Text:
+                        balance[1] -= rent;
+                        balance[0] += rent;
                         break;
-                    case string alanadi when alanadi == kaykay_oyuncusu.Text:
-                        bakiye[1] -= kira;
-                        bakiye[2] += kira;
+                    case string beneficiaryName when beneficiaryName == skateboard_player.Text:
+                        balance[1] -= rent;
+                        balance[2] += rent;
                         break;
-                    case string alanadi when alanadi == formula_oyuncusu.Text:
-                        bakiye[1] -= kira;
-                        bakiye[3] += kira;
+                    case string beneficiaryName when beneficiaryName == formula_player.Text:
+                        balance[1] -= rent;
+                        balance[3] += rent;
                         break;
-                    case string alanadi when alanadi == paten_oyuncusu.Text:
-                        bakiye[1] -= kira;
-                        bakiye[4] += kira;
+                    case string beneficiaryName when beneficiaryName == skate_player.Text:
+                        balance[1] -= rent;
+                        balance[4] += rent;
                         break;
-                    case string alanadi when alanadi == telefon_oyuncusu.Text:
-                        bakiye[1] -= kira;
-                        bakiye[5] += kira;
+                    case string beneficiaryName when beneficiaryName == telephone_player.Text:
+                        balance[1] -= rent;
+                        balance[5] += rent;
                         break;
                 }
             }
-            else if (gonderen == kaykay_oyuncusu.Text)
+            else if (remitter == skateboard_player.Text)
             {
-                switch (alan)
+                switch (beneficiary)
                 {
-                    case string alanadi when alanadi == ucak_oyuncusu.Text:
-                        bakiye[2] -= kira;
-                        bakiye[0] += kira;
+                    case string beneficiaryName when beneficiaryName == airplane_player.Text:
+                        balance[2] -= rent;
+                        balance[0] += rent;
                         break;
-                    case string alanadi when alanadi == hamburger_oyuncusu.Text:
-                        bakiye[2] -= kira;
-                        bakiye[1] += kira;
+                    case string beneficiaryName when beneficiaryName == hamburger_player.Text:
+                        balance[2] -= rent;
+                        balance[1] += rent;
                         break;
-                    case string alanadi when alanadi == formula_oyuncusu.Text:
-                        bakiye[2] -= kira;
-                        bakiye[3] += kira;
+                    case string beneficiaryName when beneficiaryName == formula_player.Text:
+                        balance[2] -= rent;
+                        balance[3] += rent;
                         break;
-                    case string alanadi when alanadi == paten_oyuncusu.Text:
-                        bakiye[2] -= kira;
-                        bakiye[4] += kira;
+                    case string beneficiaryName when beneficiaryName == skate_player.Text:
+                        balance[2] -= rent;
+                        balance[4] += rent;
                         break;
-                    case string alanadi when alanadi == telefon_oyuncusu.Text:
-                        bakiye[2] -= kira;
-                        bakiye[5] += kira;
+                    case string beneficiaryName when beneficiaryName == telephone_player.Text:
+                        balance[2] -= rent;
+                        balance[5] += rent;
                         break;
                 }
             }
-            else if (gonderen == formula_oyuncusu.Text)
+            else if (remitter == formula_player.Text)
             {
-                switch (alan)
+                switch (beneficiary)
                 {
-                    case string alanadi when alanadi == ucak_oyuncusu.Text:
-                        bakiye[3] -= kira;
-                        bakiye[0] += kira;
+                    case string beneficiaryName when beneficiaryName == airplane_player.Text:
+                        balance[3] -= rent;
+                        balance[0] += rent;
                         break;
-                    case string alanadi when alanadi == hamburger_oyuncusu.Text:
-                        bakiye[3] -= kira;
-                        bakiye[1] += kira;
+                    case string beneficiaryName when beneficiaryName == hamburger_player.Text:
+                        balance[3] -= rent;
+                        balance[1] += rent;
                         break;
-                    case string alanadi when alanadi == kaykay_oyuncusu.Text:
-                        bakiye[3] -= kira;
-                        bakiye[2] += kira;
+                    case string beneficiaryName when beneficiaryName == skateboard_player.Text:
+                        balance[3] -= rent;
+                        balance[2] += rent;
                         break;
-                    case string alanadi when alanadi == paten_oyuncusu.Text:
-                        bakiye[3] -= kira;
-                        bakiye[4] += kira;
+                    case string beneficiaryName when beneficiaryName == skate_player.Text:
+                        balance[3] -= rent;
+                        balance[4] += rent;
                         break;
-                    case string alanadi when alanadi == telefon_oyuncusu.Text:
-                        bakiye[3] -= kira;
-                        bakiye[5] += kira;
+                    case string beneficiaryName when beneficiaryName == telephone_player.Text:
+                        balance[3] -= rent;
+                        balance[5] += rent;
                         break;
                 }
             }
-            else if (gonderen == paten_oyuncusu.Text)
+            else if (remitter == skate_player.Text)
             {
-                switch (alan)
+                switch (beneficiary)
                 {
-                    case string alanadi when alanadi == ucak_oyuncusu.Text:
-                        bakiye[4] -= kira;
-                        bakiye[0] += kira;
+                    case string beneficiaryName when beneficiaryName == airplane_player.Text:
+                        balance[4] -= rent;
+                        balance[0] += rent;
                         break;
-                    case string alanadi when alanadi == hamburger_oyuncusu.Text:
-                        bakiye[4] -= kira;
-                        bakiye[1] += kira;
+                    case string beneficiaryName when beneficiaryName == hamburger_player.Text:
+                        balance[4] -= rent;
+                        balance[1] += rent;
                         break;
-                    case string alanadi when alanadi == kaykay_oyuncusu.Text:
-                        bakiye[4] -= kira;
-                        bakiye[2] += kira;
+                    case string beneficiaryName when beneficiaryName == skateboard_player.Text:
+                        balance[4] -= rent;
+                        balance[2] += rent;
                         break;
-                    case string alanadi when alanadi == formula_oyuncusu.Text:
-                        bakiye[4] -= kira;
-                        bakiye[3] += kira;
+                    case string beneficiaryName when beneficiaryName == formula_player.Text:
+                        balance[4] -= rent;
+                        balance[3] += rent;
                         break;
-                    case string alanadi when alanadi == telefon_oyuncusu.Text:
-                        bakiye[4] -= kira;
-                        bakiye[5] += kira;
+                    case string beneficiaryName when beneficiaryName == telephone_player.Text:
+                        balance[4] -= rent;
+                        balance[5] += rent;
                         break;
                 }
             }
-            else if (gonderen == telefon_oyuncusu.Text)
+            else if (remitter == telephone_player.Text)
             {
-                switch (alan)
+                switch (beneficiary)
                 {
-                    case string alanadi when alanadi == ucak_oyuncusu.Text:
-                        bakiye[5] -= kira;
-                        bakiye[0] += kira;
+                    case string beneficiaryName when beneficiaryName == airplane_player.Text:
+                        balance[5] -= rent;
+                        balance[0] += rent;
                         break;
-                    case string alanadi when alanadi == hamburger_oyuncusu.Text:
-                        bakiye[5] -= kira;
-                        bakiye[1] += kira;
+                    case string beneficiaryName when beneficiaryName == hamburger_player.Text:
+                        balance[5] -= rent;
+                        balance[1] += rent;
                         break;
-                    case string alanadi when alanadi == kaykay_oyuncusu.Text:
-                        bakiye[5] -= kira;
-                        bakiye[2] += kira;
+                    case string beneficiaryName when beneficiaryName == skateboard_player.Text:
+                        balance[5] -= rent;
+                        balance[2] += rent;
                         break;
-                    case string alanadi when alanadi == formula_oyuncusu.Text:
-                        bakiye[5] -= kira;
-                        bakiye[3] += kira;
+                    case string beneficiaryName when beneficiaryName == formula_player.Text:
+                        balance[5] -= rent;
+                        balance[3] += rent;
                         break;
-                    case string alanadi when alanadi == paten_oyuncusu.Text:
-                        bakiye[5] -= kira;
-                        bakiye[4] += kira;
+                    case string beneficiaryName when beneficiaryName == skate_player.Text:
+                        balance[5] -= rent;
+                        balance[4] += rent;
                         break;
                 }
             }
